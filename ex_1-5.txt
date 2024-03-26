@@ -1,0 +1,68 @@
+cd
+sudo su
+cat >Pets
+cat Pets
+cat > Pack animals
+cat >Pack_animals
+cat Pack_animals
+cat Pack animals >> Pets
+cat Pack_animals >> Pets
+cat Pets
+mv Pets Human_Friends
+cd
+ll
+ls
+mkdir conrol_work_prog
+ls
+cd conrol_work_prog/
+mv file Human_Friends /home/aledecter/conrol_work_prog
+mv Human_Friends /home/aledecter/conrol_work_prog
+mv Human_Friends/home/aledecter/conrol_work_prog/
+mv Human_Friends/home/aledecter/conrol_work_prog
+mv Human_Friends /home/aledecter/conrol_work_prog/
+ls
+cd
+mv Human_Friends /home/aledecter/conrol_work_prog/
+ls
+cat Pack_animals
+cat Pack
+cd conrol_work_prog/
+ll
+;s
+ls
+nano Human_Friends 
+cd
+remove Pack_animals 
+rm Pack_animals 
+ls
+cd conrol_work_prog/
+ls
+sudo apt update && sudo apt upgrade -y && sudo apt-get install -y mysql-server
+sudo mysql_secure_installation
+sudo systemctl status mysql
+sudo systemctl enable mysql
+ды
+ls
+mkdir ex_1
+mv Human_Friends /home/aledecter/conrol_work_prog/ex_1/
+ls
+cd ex_1/
+ls
+cd ..
+mkdir ex_2
+cd ex_2
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.29-1_all.deb
+dpkg -i mysql-apt-config_0.8.29-1_all.deb 
+sudo dpkg -i mysql-apt-config_0.8.29-1_all.deb 
+sudo dpkg -r mysql-apt-config_0.8.29-1_all.deb
+apt
+list
+apt list
+clear
+apt
+sudo dpkg -r mysql-apt-config
+exit
+apt download lftp
+dpkg -i lftp_4.9.2-1build1_amd64.deb
+dpkg -r lftp
+exit
