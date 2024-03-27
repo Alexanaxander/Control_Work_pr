@@ -140,26 +140,26 @@ DELETE FROM Camels WHERE id <> 0;
 
 SELECT * FROM Donkeys
 UNION ALL
-SELECT * FROM HORSES;
+SELECT * FROM Horses;
 
 
 CREATE TABLE animals_3_years
 WITH table_1 AS (SELECT name_type, name_an, date_of_birth, executed_commands, breed, character_an 
-		FROM pack_animals JOIN horses ON pack_animals.id = horses.pack_id
+		FROM Pack_animals JOIN Horses ON Pack_animals.id = Horses.pack_id
 		UNION ALL
 		SELECT name_type, name_an, date_of_birth, executed_commands, breed, character_an 
-		FROM pack_animals JOIN Donkeys ON pack_animals.id = Donkeys.pack_id
+		FROM Pack_animals JOIN Donkeys ON Pack_animals.id = Donkeys.pack_id
 		UNION ALL
 		SELECT name_type, name_an, date_of_birth, executed_commands, breed, character_an 
-		FROM pack_animals JOIN Camels ON pack_animals.id = Camels.pack_id),
+		FROM Pack_animals JOIN Camels ON Pack_animals.id = Camels.pack_id),
 	table_2 AS (SELECT name_type, name_an, date_of_birth, executed_commands, breed, character_an 
-		FROM pets JOIN Cats ON pets.id = Cats.pest_id
+		FROM Pets JOIN Cats ON Pets.id = Cats.pest_id
 		UNION ALL
 		SELECT name_type, name_an, date_of_birth, executed_commands, breed, character_an 
-		FROM pets JOIN Dogs ON pets.id = Dogs.pest_id
+		FROM Pets JOIN Dogs ON Pets.id = Dogs.pest_id
 		UNION ALL
 		SELECT name_type, name_an, date_of_birth, executed_commands, breed, character_an 
-		FROM pets JOIN Hamsters ON pets.id = Hamsters.pest_id),
+		FROM Pets JOIN Hamsters ON Pets.id = Hamsters.pest_id),
 	table_3 AS (SELECT * FROM table_1 UNION ALL SELECT * FROM table_2)
     
 SELECT *, TIMESTAMPDIFF(month, table_3.date_of_birth, '2024/03/27') AS 'Возраст(мес)' FROM table_3
@@ -170,29 +170,29 @@ where TIMESTAMPDIFF(month, table_3.date_of_birth, '2024/03/27') >= 12 and TIMEST
 
 
 CREATE TABLE animals_all
-SELECT animals.id, animals.name_type, pets.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Cats
-LEFT JOIN pets ON pets.id = Cats.pest_id
-LEFT JOIN animals ON animals.id = pets.animals_id
+SELECT ANIMALS.id, ANIMALS.name_type, Pets.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Cats
+LEFT JOIN Pets ON Pets.id = Cats.pest_id
+LEFT JOIN ANIMALS ON ANIMALS.id = Pets.animals_id
 UNION
-SELECT animals.id, animals.name_type, pets.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Dogs
-LEFT JOIN pets ON pets.id = Dogs.pest_id
-LEFT JOIN animals ON animals.id = pets.animals_id
+SELECT ANIMALS.id, ANIMALS.name_type, Pets.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Dogs
+LEFT JOIN Pets ON Pets.id = Dogs.pest_id
+LEFT JOIN ANIMALS ON ANIMALS.id = Pets.animals_id
 UNION
-SELECT animals.id, animals.name_type, pets.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM hamsters
-LEFT JOIN pets ON pets.id = hamsters.pest_id
-LEFT JOIN animals ON animals.id = pets.animals_id
+SELECT ANIMALS.id, ANIMALS.name_type, Pets.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Hamsters
+LEFT JOIN Pets ON Pets.id = Hamsters.pest_id
+LEFT JOIN ANIMALS ON ANIMALS.id = Pets.animals_id
 UNION
-SELECT animals.id, animals.name_type, pack_animals.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM horses
-LEFT JOIN pack_animals ON pack_animals.id = horses.pack_id
-LEFT JOIN animals ON animals.id = pack_animals.animals_id
+SELECT ANIMALS.id, ANIMALS.name_type, Pack_animals.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Horses
+LEFT JOIN Pack_animals ON Pack_animals.id = Horses.pack_id
+LEFT JOIN ANIMALS ON ANIMALS.id = Pack_animals.animals_id
 UNION
-SELECT animals.id, animals.name_type, pack_animals.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM donkeys
-LEFT JOIN pack_animals ON pack_animals.id = donkeys.pack_id
-LEFT JOIN animals ON animals.id = pack_animals.animals_id
+SELECT ANIMALS.id, ANIMALS.name_type, Pack_animals.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Donkeys
+LEFT JOIN Pack_animals ON Pack_animals.id = Donkeys.pack_id
+LEFT JOIN ANIMALS ON ANIMALS.id = Pack_animals.animals_id
 UNION
-SELECT animals.id, animals.name_type, pack_animals.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM camels
-LEFT JOIN pack_animals ON pack_animals.id = camels.pack_id
-LEFT JOIN animals ON animals.id = pack_animals.animals_id
+SELECT ANIMALS.id, ANIMALS.name_type, Pack_animals.name_type AS name_animal, name_an, date_of_birth, executed_commands, breed, character_an FROM Camels
+LEFT JOIN Pack_animals ON Pack_animals.id = Camels.pack_id
+LEFT JOIN ANIMALS ON ANIMALS.id = Pack_animals.animals_id
 ORDER BY id;
 
 
