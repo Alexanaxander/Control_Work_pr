@@ -2,7 +2,7 @@ package animals;
 
 import animals.animal;
 
-public abstract class pets extends animal {
+public class pets extends animal {
 
     private String nameAnimal;
 
