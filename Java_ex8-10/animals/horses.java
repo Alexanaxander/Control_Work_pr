@@ -1,16 +1,17 @@
 package animals;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 
 public class horses extends packAnimals{
     private String name;
-    private Calendar dateOfBirth;
+    private LocalDate dateOfBirth;
     private ArrayList<String> executedCommands;
     private String breed;
     private String character;
 
-    public horses(String name, Calendar dateOfBirth, ArrayList<String> executedCommands,
+    public horses(String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
                 String breed, String character) {
         super("horses");
         this.name = name;
@@ -28,11 +29,11 @@ public class horses extends packAnimals{
         this.name = name;
     }
 
-    public Calendar getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Calendar dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

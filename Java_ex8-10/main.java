@@ -1,8 +1,13 @@
+import animals.dogs;
 import exceptions.writeException;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 import static addAnimals.writeFile.writeToFile;
+import static basicLogic.addAnimals0.AddAnimals00;
+import static basicLogic.stringConversion.StringConversion;
 
 public class main {
     public static void main(String[] args) throws IOException {
@@ -16,9 +21,9 @@ public class main {
             System.out.println(help);
         }
         bufferedReader.close();
+        */
+        dogs dog = (dogs) AddAnimals00();
+        System.out.println(dog.toString());
 
-Готовый шаблон для читки файла.
-
-         */
     }
 }
