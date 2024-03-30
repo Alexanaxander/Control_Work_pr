@@ -60,4 +60,15 @@ public class horses extends packAnimals{
     public void setCharacter(String character) {
         this.character = character;
     }
+
+    @Override
+    public String toString() {
+        return "horses{" +
+                "name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", executedCommands=" + executedCommands +
+                ", breed='" + breed + '\'' +
+                ", character='" + character + '\'' +
+                '}';
+    }
 }

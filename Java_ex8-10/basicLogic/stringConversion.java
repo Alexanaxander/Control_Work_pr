@@ -15,9 +15,9 @@ public class stringConversion {
                 arrayList.add(stringBuilder.toString());
                 stringBuilder = new StringBuilder();
                 j = 0;
-            } else if (s != ' ') {
-                if (s == '.' || s == '/' || s == ',' || s == ':' || s == ';' || s == '"' || s == '{'
-                        || s == '}' || s == '[' || s == ']' || s == '+' || s == '=' || s == '-'
+            } else{
+                if (s == '.' || s == '/' || s == ':' || s == ';' || s == '"' || s == '{'
+                        || s == '}' || s == '[' || s == ']' || s == '+' || s == '='
                         || s == '_' || s == ')' || s == '(' || s == '*' || s == '&' || s == '?'
                         || s == '^' || s == '%' || s == '$' || s == '#' || s == '№' || s == '@'
                         || s == '!' || s == '~' || s == '\\' || s == '|') {

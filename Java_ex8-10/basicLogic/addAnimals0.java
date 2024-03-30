@@ -4,6 +4,7 @@ import animals.*;
 import exceptions.writeException;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
@@ -12,7 +13,7 @@ import static addAnimals.writeFile.writeToFile;
 import static basicLogic.stringConversion.StringConversion;
 
 public class addAnimals0 {
-    public static String WorkingWithUser(Scanner in){
+    public static String WorkingWithUser(Scanner in) throws DateTimeParseException{
         String s = "";
         StringBuilder stringBuilder = new StringBuilder();
         System.out.println("Введите имя животного:");
@@ -21,13 +22,14 @@ public class addAnimals0 {
         System.out.println("Введите дату рождения животного в формате гггг-мм-дд:");
         s = in.nextLine();
         LocalDate localDate = LocalDate.parse(s);
-        stringBuilder.append(s).append(" ");
-        System.out.println("Введите список команд, которые знает животное через пробел:");
-        stringBuilder.append(in.nextLine()).append(" ");
+        stringBuilder.append(s);
+        System.out.println("Введите список команд, которые знает животное через запятую" +
+                "без пробела, если их нет напишите -:");
+        stringBuilder.append(" ").append("(").append(in.nextLine()).append(")").append(" ");
         System.out.println("Введите породу животного:");
         stringBuilder.append(in.nextLine()).append(" ");
         System.out.println("Введите характер животного:");
-        stringBuilder.append(in.nextLine()).append(" ");
+        stringBuilder.append(in.nextLine()).append(" \n");
 
         return stringBuilder.toString();
     }

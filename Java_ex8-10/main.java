@@ -1,7 +1,9 @@
+import animals.animal;
 import animals.dogs;
 import exceptions.writeException;
 
 import java.io.*;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,8 +24,12 @@ public class main {
         }
         bufferedReader.close();
         */
-        dogs dog = (dogs) AddAnimals00();
-        System.out.println(dog.toString());
+        try {
+            animal animal = AddAnimals00();
+            System.out.println(animal.toString());
+        }catch (DateTimeParseException e){
+            System.out.println("упс");
+        }
 
     }
 }

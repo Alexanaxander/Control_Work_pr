@@ -61,4 +61,15 @@ public class cats extends pets{
     public void setCharacter(String character) {
         this.character = character;
     }
+
+    @Override
+    public String toString() {
+        return "cats{" +
+                "name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", executedCommands=" + executedCommands +
+                ", breed='" + breed + '\'' +
+                ", character='" + character + '\'' +
+                '}';
+    }
 }

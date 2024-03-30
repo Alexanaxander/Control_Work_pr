@@ -59,4 +59,15 @@ public class camels extends packAnimals{
     public void setCharacter(String character) {
         this.character = character;
     }
+
+    @Override
+    public String toString() {
+        return "camels{" +
+                "name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", executedCommands=" + executedCommands +
+                ", breed='" + breed + '\'' +
+                ", character='" + character + '\'' +
+                '}';
+    }
 }
