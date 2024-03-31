@@ -26,7 +26,9 @@ public class main {
 //        }
         ArrayList<pets> arrayListPets = InitialFileVerificationPets();
         ArrayList<packAnimals> arrayListPackAnimals = InitialFileVerificationPackAnimals();
-        OverwritingCommands(0, 3, arrayListPets.get(2));
+        GetAnimalForDate(arrayListPets, arrayListPackAnimals);
+        GetCount(arrayListPets, arrayListPackAnimals);
+//        OverwritingCommands(0, 3, arrayListPets.get(2));
 //        LocalDate localDate = LocalDate.parse("2000-11-11");
 //        LocalDate localDate1 = LocalDate.parse("2000-10-11");
 //        System.out.println(localDate.isAfter(localDate1));

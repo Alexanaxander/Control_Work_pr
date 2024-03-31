@@ -7,7 +7,6 @@ public class camels extends packAnimals {
 
     public camels(String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
                   String breed, String character) {
-        super("packAnimals", name, dateOfBirth, executedCommands, breed, character,
-                "верблюд");
+        super("packAnimals", "верблюд", name, dateOfBirth, executedCommands, breed, character);
     }
 }

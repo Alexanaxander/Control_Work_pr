@@ -5,15 +5,17 @@ import java.util.ArrayList;
 
 public abstract class animal {
     private String nameType;
+    private String nameAnimal;
     private String name;
     private LocalDate dateOfBirth;
     private ArrayList<String> executedCommands;
     private String breed;
     private String character;
 
-    public animal(String nameType, String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
+    public animal(String nameType,String nameAnimal, String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
                   String breed, String character) {
         this.nameType = nameType;
+        this.nameAnimal = nameAnimal;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.executedCommands = executedCommands;
@@ -69,10 +71,19 @@ public abstract class animal {
         this.character = character;
     }
 
+    public String getNameAnimal() {
+        return nameAnimal;
+    }
+
+    public void setNameAnimal(String nameAnimal) {
+        this.nameAnimal = nameAnimal;
+    }
+
     @Override
     public String toString() {
         return "animal{" +
                 "nameType='" + nameType + '\'' +
+                ", nameAnimal='" + nameAnimal + '\'' +
                 ", name='" + name + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", executedCommands=" + executedCommands +

@@ -123,12 +123,30 @@ public class  basicLogic {
     public static void OverWritingComm(int i, int j, animal animal) throws IOException {
         OverwritingCommands(i, j, animal);
     }
-//    public static void GetAnimalForDate(ArrayList<pets> arrayListPets,
-//                                        ArrayList<packAnimals> arrayListPackAnimals){
-//        ArrayList<animal> allAnimal = new ArrayList<>();
-//        allAnimal.addAll(arrayListPets);
-//        allAnimal.addAll(arrayListPackAnimals);
-//
-//    }
+    public static void GetAnimalForDate(ArrayList<pets> arrayListPets,
+                                        ArrayList<packAnimals> arrayListPackAnimals){
+        ArrayList<animal> allAnimal = new ArrayList<>();
+        allAnimal.addAll(arrayListPets);
+        allAnimal.addAll(arrayListPackAnimals);
+        for (int i = 0; i < allAnimal.size(); i++) {
+            for (int j = 0; j < allAnimal.size() - i - 1; j++) {
+                if(allAnimal.get(j).getDateOfBirth().isAfter(allAnimal.get(j + 1).getDateOfBirth())){
+                    animal help = allAnimal.get(j);
+                    allAnimal.set(j, allAnimal.get(j + 1));
+                    allAnimal.set(j + 1, help);
+                }
+            }
+        }
+        for (animals.animal animal : allAnimal) {
+            System.out.println(animal.toString());
+        }
+    }
+    public static void GetCount(ArrayList<pets> arrayListPets,
+                                ArrayList<packAnimals> arrayListPackAnimals){
+        ArrayList<animal> allAnimal = new ArrayList<>();
+        allAnimal.addAll(arrayListPets);
+        allAnimal.addAll(arrayListPackAnimals);
+        System.out.println(allAnimal.size());
+    }
 }
 
