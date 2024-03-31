@@ -5,6 +5,7 @@ import animals.pets;
 import exceptions.writeException;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -23,9 +24,12 @@ public class main {
 //        }catch (DateTimeParseException e){
 //            System.out.println("упс");
 //        }
-        ArrayList<pets> arrayListPets = InitialFileVerificationPets();
-        ArrayList<packAnimals> arrayListPackAnimals = InitialFileVerificationPackAnimals();
-        OverwritingCommands(1, 0, arrayListPackAnimals.get(0));
+//        ArrayList<pets> arrayListPets = InitialFileVerificationPets();
+//        ArrayList<packAnimals> arrayListPackAnimals = InitialFileVerificationPackAnimals();
+//        OverwritingCommands(0, 3, arrayListPets.get(3));
+        LocalDate localDate = LocalDate.parse("2000-11-11");
+        LocalDate localDate1 = LocalDate.parse("2000-10-11");
+        System.out.println(localDate.isAfter(localDate1));
     }
 }
 

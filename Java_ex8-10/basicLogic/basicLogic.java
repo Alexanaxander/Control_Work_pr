@@ -10,8 +10,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import static basicLogic.addAnimals0.AddAnimals00;
+import static basicLogic.overwritingCommands.OverwritingCommands;
 import static basicLogic.stringConversion.StringConversion;
 import static basicLogic.stringConversion.StringConversionCommands;
 
@@ -118,6 +120,15 @@ public class  basicLogic {
         animal animal1 = AddAnimals00();
         animal.add((packAnimals) animal1);
     }
+    public static void OverWritingComm(int i, int j, animal animal) throws IOException {
+        OverwritingCommands(i, j, animal);
+    }
+    public static void GetAnimalForDate(ArrayList<pets> arrayListPets,
+                                        ArrayList<packAnimals> arrayListPackAnimals){
+        ArrayList<animal> allAnimal = new ArrayList<>();
+        allAnimal.addAll(arrayListPets);
+        allAnimal.addAll(arrayListPackAnimals);
 
+    }
 }
 

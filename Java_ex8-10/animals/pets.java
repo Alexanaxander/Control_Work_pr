@@ -18,5 +18,4 @@ public class pets extends animal {
     public void setNameAnimal(String nameAnimal) {
         this.nameAnimal = nameAnimal;
     }
-
 }

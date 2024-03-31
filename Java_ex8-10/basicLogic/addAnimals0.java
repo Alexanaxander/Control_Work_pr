@@ -29,11 +29,11 @@ public class addAnimals0 {
         stringBuilder.append(s);
         System.out.println("Введите список команд, которые знает животное через запятую" +
                 " БЕЗ ПРОБЕЛА, если их нет напишите -:");
-        stringBuilder.append(" ").append("(").append(in.nextLine()).append(")").append(" ");
+        stringBuilder.append(" ").append(in.nextLine()).append(" ");
         System.out.println("Введите породу животного:");
         stringBuilder.append(in.nextLine()).append(" ");
         System.out.println("Введите характер животного:");
-        stringBuilder.append(in.nextLine()).append("  \n");
+        stringBuilder.append(in.nextLine()).append(" \n");
 
         return stringBuilder.toString();
     }

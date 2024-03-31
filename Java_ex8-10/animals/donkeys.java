@@ -42,7 +42,7 @@ public class donkeys extends packAnimals{
     }
 
     public void setExecutedCommands(ArrayList<String> executedCommands) {
-        this.executedCommands = executedCommands;
+        this.executedCommands.addAll(executedCommands);
     }
 
     public String getBreed() {
