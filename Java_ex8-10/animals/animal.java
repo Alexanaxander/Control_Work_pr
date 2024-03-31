@@ -1,13 +1,24 @@
 package animals;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 public abstract class animal {
     private String nameType;
+    private String name;
+    private LocalDate dateOfBirth;
+    private ArrayList<String> executedCommands;
+    private String breed;
+    private String character;
 
-    public animal(String nameType){
+    public animal(String nameType, String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
+                  String breed, String character) {
         this.nameType = nameType;
-    }
-
-    public animal() {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.executedCommands = executedCommands;
+        this.breed = breed;
+        this.character = character;
     }
 
     public String getNameType() {
@@ -18,4 +29,55 @@ public abstract class animal {
         this.nameType = nameType;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public ArrayList<String> getExecutedCommands() {
+        return executedCommands;
+    }
+
+    public void setExecutedCommands(ArrayList<String> executedCommands) {
+        this.executedCommands.addAll(executedCommands);
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public String getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(String character) {
+        this.character = character;
+    }
+
+    @Override
+    public String toString() {
+        return "animal{" +
+                "nameType='" + nameType + '\'' +
+                ", name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", executedCommands=" + executedCommands +
+                ", breed='" + breed + '\'' +
+                ", character='" + character + '\'' +
+                '}';
+    }
 }

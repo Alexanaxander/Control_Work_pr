@@ -2,12 +2,16 @@ package animals;
 
 import animals.animal;
 
-public class pets extends animal {
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public abstract class pets extends animal {
 
     private String nameAnimal;
 
-    public pets(String nameAnimal) {
-        super("animals.pets");
+    public pets(String nameType, String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
+                String breed, String character, String nameAnimal) {
+        super(nameType, name, dateOfBirth, executedCommands, breed, character);
         this.nameAnimal = nameAnimal;
     }
 

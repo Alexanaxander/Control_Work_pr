@@ -123,12 +123,12 @@ public class  basicLogic {
     public static void OverWritingComm(int i, int j, animal animal) throws IOException {
         OverwritingCommands(i, j, animal);
     }
-    public static void GetAnimalForDate(ArrayList<pets> arrayListPets,
-                                        ArrayList<packAnimals> arrayListPackAnimals){
-        ArrayList<animal> allAnimal = new ArrayList<>();
-        allAnimal.addAll(arrayListPets);
-        allAnimal.addAll(arrayListPackAnimals);
-
-    }
+//    public static void GetAnimalForDate(ArrayList<pets> arrayListPets,
+//                                        ArrayList<packAnimals> arrayListPackAnimals){
+//        ArrayList<animal> allAnimal = new ArrayList<>();
+//        allAnimal.addAll(arrayListPets);
+//        allAnimal.addAll(arrayListPackAnimals);
+//
+//    }
 }
 
