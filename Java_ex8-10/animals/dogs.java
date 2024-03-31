@@ -13,7 +13,7 @@ public class dogs extends pets{
 
     public dogs(String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
                 String breed, String character) {
-        super("dogs");
+        super("собака");
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.executedCommands = executedCommands;

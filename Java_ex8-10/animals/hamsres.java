@@ -13,7 +13,7 @@ public class hamsres extends pets{
 
     public hamsres(String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
                 String breed, String character) {
-        super("hamsters");
+        super("хомяк");
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.executedCommands = executedCommands;

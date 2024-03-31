@@ -14,7 +14,7 @@ public class cats extends pets{
 
     public cats(String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
                 String breed, String character) {
-        super("cats");
+        super("кот");
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.executedCommands = executedCommands;

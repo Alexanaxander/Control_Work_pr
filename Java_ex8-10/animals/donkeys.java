@@ -13,7 +13,7 @@ public class donkeys extends packAnimals{
 
     public donkeys(String name, LocalDate dateOfBirth, ArrayList<String> executedCommands,
                 String breed, String character) {
-        super("donkeys");
+        super("осел");
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.executedCommands = executedCommands;

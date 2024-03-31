@@ -11,14 +11,17 @@ public class stringConversion {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < string.length(); i++){
             char s = string.charAt(i);
-            if (s == ' ' && j != 0){
+            if ((s == ' ' || i == string.length() - 1) && j != 0){
+                if (i == string.length() - 1){
+                    stringBuilder.append(string.charAt(i));
+                }
                 arrayList.add(stringBuilder.toString());
                 stringBuilder = new StringBuilder();
                 j = 0;
             } else{
                 if (s == '.' || s == '/' || s == ':' || s == ';' || s == '"' || s == '{'
                         || s == '}' || s == '[' || s == ']' || s == '+' || s == '='
-                        || s == '_' || s == ')' || s == '(' || s == '*' || s == '&' || s == '?'
+                        || s == '*' || s == '&' || s == '?' || s == ' '
                         || s == '^' || s == '%' || s == '$' || s == '#' || s == '№' || s == '@'
                         || s == '!' || s == '~' || s == '\\' || s == '|') {
                 } else {
@@ -29,4 +32,25 @@ public class stringConversion {
         }
         return arrayList;
     }
+    public static ArrayList<String> StringConversionCommands(String string){
+        ArrayList<String> arrayList = new ArrayList<>();
+        int j = 0;
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < string.length(); i++){
+            char s = string.charAt(i);
+            if ((s == ',' || i == string.length() - 1) && j != 0){
+                if (i == string.length() - 1){
+                    stringBuilder.append(string.charAt(i));
+                }
+                arrayList.add(stringBuilder.toString());
+                stringBuilder = new StringBuilder();
+                j = 0;
+            } else{
+                stringBuilder.append(string.charAt(i));
+                j++;
+            }
+        }
+        return arrayList;
+    }
+
 }
