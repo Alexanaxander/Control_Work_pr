@@ -1,10 +1,7 @@
 package basicLogic;
 
-import animals.animal;
-import animals.pets;
 
 import java.io.*;
-import java.util.ArrayList;
 
 public class deleteAnimal {
     public static void DeleteAnimals(int i, int j) throws FileNotFoundException, IOException {

@@ -22,6 +22,7 @@ public class overwritingCommands {
                         .append(animal00.getBreed()).append(" ").append(animal00.getCharacter());
             } else if (animal instanceof cats) {
                 cats animal00 = (cats) animal;
+                ((cats) animal).setExecutedCommands(SetComm());
                 animalTxt.append(animal00.getNameAnimal()).append(" ").append(animal00.getName()).append(" ")
                         .append(animal00.getDateOfBirth()).append(" ")
                         .append(String.join(",", animal00.getExecutedCommands()))
@@ -29,6 +30,7 @@ public class overwritingCommands {
                         .append(animal00.getBreed()).append(" ").append(animal00.getCharacter());
             } else {
                 hamsres animal00 = (hamsres) animal;
+                ((hamsres) animal).setExecutedCommands(SetComm());
                 animalTxt.append(animal00.getNameAnimal()).append(" ").append(animal00.getName()).append(" ")
                         .append(animal00.getDateOfBirth()).append(" ")
                         .append(String.join(",", animal00.getExecutedCommands()))
@@ -38,6 +40,7 @@ public class overwritingCommands {
         } else {
             if (animal instanceof camels) {
                 camels animal00 = (camels) animal;
+                ((camels) animal).setExecutedCommands(SetComm());
                 animalTxt.append(animal00.getNameAnimal()).append(" ").append(animal00.getName()).append(" ")
                         .append(animal00.getDateOfBirth()).append(" ")
                         .append(String.join(",", animal00.getExecutedCommands()))
@@ -45,6 +48,7 @@ public class overwritingCommands {
                         .append(animal00.getBreed()).append(" ").append(animal00.getCharacter());
             } else if (animal instanceof horses) {
                 horses animal00 = (horses) animal;
+                ((horses) animal).setExecutedCommands(SetComm());
                 animalTxt.append(animal00.getNameAnimal()).append(" ").append(animal00.getName()).append(" ")
                         .append(animal00.getDateOfBirth()).append(" ")
                         .append(String.join(",", animal00.getExecutedCommands()))
@@ -52,6 +56,7 @@ public class overwritingCommands {
                         .append(animal00.getBreed()).append(" ").append(animal00.getCharacter());
             } else {
                 donkeys animal00 = (donkeys) animal;
+                ((donkeys) animal).setExecutedCommands(SetComm());
                 animalTxt.append(animal00.getNameAnimal()).append(" ").append(animal00.getName()).append(" ")
                         .append(animal00.getDateOfBirth()).append(" ")
                         .append(String.join(",", animal00.getExecutedCommands()))

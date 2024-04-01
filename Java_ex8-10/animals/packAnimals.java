@@ -1,6 +1,5 @@
 package animals;
 
-import animals.animal;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

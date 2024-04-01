@@ -3,20 +3,22 @@ package basicLogic;
 import animals.*;
 import exceptions.writeException;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 import static addAnimals.writeFile.writeToFile;
+import static basicLogic.app.App;
 import static basicLogic.stringConversion.StringConversion;
 import static basicLogic.stringConversion.StringConversionCommands;
 
 public class addAnimals0 {
-    public static String WorkingWithUser(Scanner in) throws DateTimeParseException{
+    public static String WorkingWithUser() throws DateTimeParseException{
         String s = "";
         StringBuilder stringBuilder = new StringBuilder();
+        Scanner in = new Scanner(System.in);
         System.out.println("Введите название животного (\"собака\" или \"верблюд\"):");
         s = in.nextLine().toLowerCase();
         stringBuilder.append(s).append(" ");
@@ -34,14 +36,13 @@ public class addAnimals0 {
         stringBuilder.append(in.nextLine()).append(" ");
         System.out.println("Введите характер животного:");
         stringBuilder.append(in.nextLine()).append(" \n");
+//        in.close();
 
         return stringBuilder.toString();
     }
 
-    public static animal AddAnimals00() throws writeException {
-        Scanner in = new Scanner(System.in);
-        String string = WorkingWithUser(in);
-        in.close();
+    public static animal AddAnimals00() throws writeException, IOException {
+        String string = WorkingWithUser();
         ArrayList<String> newStringArr = StringConversion(string);
         String nameAn = newStringArr.get(0);
         nameAn = nameAn.toLowerCase();
@@ -53,7 +54,7 @@ public class addAnimals0 {
             writeToFile(string, 1);
         }else {
             System.out.println("Программа не знает такого животного(");
-            System.exit(1);
+            App();
         }
         String name = newStringArr.get(1);
         LocalDate dateOfBirth = LocalDate.parse(newStringArr.get(2));

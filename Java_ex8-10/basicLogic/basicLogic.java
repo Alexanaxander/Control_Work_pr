@@ -2,7 +2,6 @@
 package basicLogic;
 
 import animals.*;
-import exceptions.writeException;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -112,14 +111,15 @@ public class  basicLogic {
             return animal00.getExecutedCommands();
         }
     }
-    public static void AddPets(ArrayList<pets> animal) throws writeException {
-        animal animal1 = AddAnimals00();
-        animal.add((pets) animal1);
+    public static void AddAnimals() throws IOException {
+        animal animal = AddAnimals00();
     }
-    public static void AddPackAnimals(ArrayList<packAnimals> animal) throws writeException {
-        animal animal1 = AddAnimals00();
-        animal.add((packAnimals) animal1);
-    }
+//    public static void AddPets() throws writeException {
+//        animal animal1 = AddAnimals00();
+//    }
+//    public static void AddPackAnimals() throws writeException {
+//        animal animal1 = AddAnimals00();
+//    }
     public static void OverWritingComm(int i, int j, animal animal) throws IOException {
         OverwritingCommands(i, j, animal);
     }

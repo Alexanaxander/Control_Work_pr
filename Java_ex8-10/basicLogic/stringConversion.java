@@ -1,7 +1,5 @@
 package basicLogic;
 
-import animals.animal;
-
 import java.util.ArrayList;
 
 public class stringConversion {
